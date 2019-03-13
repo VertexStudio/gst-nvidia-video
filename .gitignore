@@ -1,0 +1,7 @@
+*
+
+!.gitignore
+!/Dockerfile
+!/bashrc
+!/docker_build.sh
+!/docker_run.sh
