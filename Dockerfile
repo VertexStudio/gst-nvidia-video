@@ -10,7 +10,13 @@ RUN apt-get update && apt-get install -y \
     gstreamer1.0-qt5 gstreamer1.0-pulseaudio
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    apt-utils build-essential sudo git
+    apt-utils build-essential sudo git \
+    gtk-doc-tools
+
+# RUN apt-get install -y libgstreamer0.10-dev libgstreamer-plugins-base0.10-dev \
+#     libfontconfig1-dev libfreetype6-dev libpng-dev \
+#     libcairo2-dev libjpeg-dev libgif-dev \
+#     libgstreamer-plugins-base1.0-dev
 
 COPY bashrc /etc/bash.bashrc
 RUN chmod a+rwx /etc/bash.bashrc
