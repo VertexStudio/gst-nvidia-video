@@ -1,1 +1,1 @@
- docker run --rm --runtime=nvidia -ti -v $(pwd):/home/gst --network=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --cap-add=SYS_PTRACE gst-nvidia-video
+ docker run --runtime=nvidia -ti -v $(pwd):/home/gst --network=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --cap-add=SYS_PTRACE --name gst gst-nvidia-video

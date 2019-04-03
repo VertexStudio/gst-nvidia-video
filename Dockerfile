@@ -51,4 +51,7 @@ echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 USER gst
 WORKDIR /home/gst
 
+COPY entrypoint.sh /home/gst
+
+ENTRYPOINT ["./entrypoint.sh", "--"]
 CMD ["bash"]
