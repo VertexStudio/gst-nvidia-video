@@ -1,19 +1,18 @@
 
-
+## Test the container
 ```
 gst-launch-1.0 videotestsrc ! autovideosink
 gst-launch-1.0 videotestsrc ! nvh264enc ! fakesink
 ```
+## Debug your pipelines
 
 ```
-./autogen.sh --noconfigure
-
-./configure \
-    --libdir=/usr/lib/x86_64-linux-gnu \
-    CUDA_CFLAGS="-I/usr/local/cuda/include" \
-    CUDA_LIBS="-L/usr/local/cuda/lib64" \
-    NVENCODE_CFLAGS="-I/usr/local/cuda/include" \
-    NVENCODE_LIBS="-L/usr/local/cuda/lib64/stubs"
+export GST_DEBUG_DUMP_DOT_DIR=/some/path/to/save/dot/files
 ```
-
-
+```
+Run a GStreamer pipeline
+```
+```
+./gst_pipelines_diagrams.sh
+```
+Then check your pipeline diagrams at `$GST_DEBUG_DUMP_DOT_DIR/diagrams`.
